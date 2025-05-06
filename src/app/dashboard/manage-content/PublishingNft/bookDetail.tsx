@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import GenreTag from "./genre";
 import Image from "next/image";
+import basildocument from "../../../../../public/basildocument.png";
+
 
 const AVAILABLE_GENRES = ["Fiction", "Drama", "Science Fiction", "Fantasy", "Mystery", "Romance"];
 const AVAILABLE_TAGS = ["Adventure", "Sci-Fi", "Bestseller", "New Release", "Fantasy"];
@@ -52,9 +54,11 @@ export default function BookDetails({ bookData, updateBookData, nextStep, prevSt
                 <div>
                     <div className="border-2 border-dashed border-blue-200 rounded-md p-4 flex flex-col items-center justify-center h-64 bg-blue-50">
                         <Image
-                            src="/imageupload.svg"
-                            alt="image upload"
-                            className=" w-72 h-60"
+                            src={basildocument}
+                            alt="document upload"
+                            width={20}
+                            height={10}
+                            className="w-15 h-10"
                         />
                         <p className="text-sm text-gray-500 text-center">
                             Drag and drop or Click to<br />choose file from device
@@ -106,7 +110,7 @@ export default function BookDetails({ bookData, updateBookData, nextStep, prevSt
 
                         <div className="flex justify-between mt-8">
                             <button
-                                className="px-6 py-2 bg-gray-100 text-gray-800 rounded-md font-medium hover:bg-gray-200"
+                                className="px-6 py-2 bg-blue-100 text-gray-800 rounded-md font-medium hover:bg-gray-200"
                                 onClick={prevStep}
                             >
                                 Previous Page

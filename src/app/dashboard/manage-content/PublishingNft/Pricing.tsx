@@ -2,6 +2,9 @@
 
 import type React from "react";
 import Image from "next/image";
+import basildocument from "../../../../../public/basildocument.png";
+import dollar from "../../../../../public/dollar.svg";
+import stark from "../../../../../public/stark.svg";
 
 
 type BookData = {
@@ -25,11 +28,13 @@ function Pricing({ bookData, updateBookData, prevStep, publishBook }: PricingPro
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <div className="border-2 border-dashed border-blue-200 rounded-md p-4 flex flex-col items-center justify-center h-64 bg-blue-50">
-          <Image
-                src="/imageupload.svg" 
-                alt="image upload"
-                className=" w-72 h-60"
-              />
+            <Image
+              src={basildocument}
+              alt="document upload"
+              width={20}
+              height={10}
+              className="w-15 h-10"
+            />
 
             <p className="text-sm text-gray-500 text-center">
               Drag and drop or Click to<br />choose file from device
@@ -61,8 +66,16 @@ function Pricing({ bookData, updateBookData, prevStep, publishBook }: PricingPro
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Set Price (USDC)</label>
                   <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <span className="text-gray-500 sm:text-sm">$</span>
+                    <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
+
+                      <Image
+                        src={dollar}
+                        alt="document upload"
+                        width={20}
+                        height={10}
+                        className="w-5 h-5"
+                      />
+
                     </div>
                     <input
                       type="number"
@@ -76,19 +89,25 @@ function Pricing({ bookData, updateBookData, prevStep, publishBook }: PricingPro
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Price in Stark ($STRK)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Price in Stark (STRK)</label>
                   <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-1 flex items-center pointer-events-none">
+
+                      <Image
+                        src={stark}
+                        alt="document upload"
+                        width={20}
+                        height={10}
+                        className="w-5 h-5"
+                      />
+
+                    </div>
                     <input
                       type="number"
                       className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
                       value={bookData.priceSTRK}
                       readOnly
                     />
-                    <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                      <span className="inline-flex items-center">
-                        <div className="h-4 w-4 mr-1 bg-blue-500 rounded-full"></div>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -100,7 +119,7 @@ function Pricing({ bookData, updateBookData, prevStep, publishBook }: PricingPro
 
             <div className="flex justify-between mt-8">
               <button
-                className="px-6 py-2 bg-gray-100 text-gray-800 rounded-md font-medium hover:bg-gray-200"
+                className="px-6 py-2 bg-blue-100 text-gray-800 rounded-md font-medium hover:bg-gray-200"
                 onClick={prevStep}
               >
                 Previous Page
@@ -117,4 +136,4 @@ function Pricing({ bookData, updateBookData, prevStep, publishBook }: PricingPro
       </div>
     </div>
   );
-}export default Pricing;
+} export default Pricing;
