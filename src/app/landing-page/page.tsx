@@ -40,7 +40,7 @@ export default function landing() {
                    <Link href="/books" className="text-gray-500 font-medium hover:text-gray-900">
                      Books
                    </Link>
-                   <Link href="/about-us" className="text-gray-500 font-medium hover:text-gray-900">
+                   <Link href="/how-it-works" className="text-gray-500 font-medium hover:text-gray-900">
                      How It Works
                    </Link>
                    <Link
