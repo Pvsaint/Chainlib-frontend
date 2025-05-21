@@ -589,7 +589,7 @@ export default function About() {
                     </div>
                   </div>
                   <div>
-                    <p className="font-medium font-semibold text-[#000B21]">
+                    <p className="font-semibold text-[#000B21]">
                       Our Community
                     </p>
                     <p className="text-[#0F265C] font-semibold">
