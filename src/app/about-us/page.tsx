@@ -48,14 +48,14 @@ export default function About() {
               <Link href="/" className="text-gray-500 hover:text-gray-900">
                 Home
               </Link>
-              <Link href="/about-us" className="text-blue-600 font-medium">
+              <Link href="/books" className="text-blue-600 font-medium">
                 Books
               </Link>
-              <Link href="/about-us" className="text-blue-600 font-medium">
+              <Link href="/how-it-works" className="text-blue-600 font-medium">
                 How It Works
               </Link>
               <Link
-                href="/books"
+                href="/about-us"
                 className="bg-blue-100 px-3 py-1 rounded-full text-gray-500 hover:text-gray-900"
               >
                 About ChainLib
@@ -589,7 +589,7 @@ export default function About() {
                     </div>
                   </div>
                   <div>
-                    <p className="font-medium font-semibold text-[#000B21]">
+                    <p className="font-semibold text-[#000B21]">
                       Our Community
                     </p>
                     <p className="text-[#0F265C] font-semibold">
