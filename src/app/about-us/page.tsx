@@ -2,153 +2,22 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Image2 from "@/assets/Images/image.png";
 import Image3 from "@/assets/Images/footerimage.png";
 import Image4 from "@/assets/Images/ImageLogo.png";
 import Imagetiny1 from "@/assets/Images/1.png";
 import Imagetiny2 from "@/assets/Images/2.png";
-// import Imagetiny3 from "@/assets/Images/5.png";
 import Imagetiny4 from "@/assets/Images/4.png";
 import Imagetiny5 from "@/assets/Images/5.png";
 
-export default function About() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+export default function About() {  
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navigation */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <div className="flex items-center">
-              <Link href="/">
-                <span className="flex items-center cursor-pointer">
-                  <Image
-                    src={Image4}
-                    alt="Logo"
-                    width={24}
-                    height={24}
-                    className="h-9 w-9"
-                  />
-                  {/* </div> */}
-                  <span className="ml-2 text-[#0F265C] text-lg font-medium">
-                    ChainLib
-                  </span>
-                </span>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-500 hover:text-gray-900">
-                Home
-              </Link>
-              <Link href="/books" className="text-blue-600 font-medium">
-                Books
-              </Link>
-              <Link href="/how-it-works" className="text-blue-600 font-medium">
-                How It Works
-              </Link>
-              <Link
-                href="/about-us"
-                className="bg-blue-100 px-3 py-1 rounded-full text-gray-500 hover:text-gray-900"
-              >
-                About ChainLib
-              </Link>
-            </nav>
-
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-                Log In
-              </button>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
-                Sign Up
-              </button>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="pt-2 pb-3 space-y-1">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50"
-              >
-                Home
-              </Link>
-              <Link
-                href="/about-us"
-                className="block px-3 py-2 text-base font-medium text-blue-600 bg-blue-50"
-              >
-                About Check.io
-              </Link>
-              <Link
-                href="/books"
-                className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50"
-              >
-                Books
-              </Link>
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50"
-              >
-                Contact
-              </Link>
-            </div>
-            <div className="pt-4 pb-3 border-t border-gray-200">
-              <div className="flex items-center px-4 space-x-3">
-                <button className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium">
-                  Log In
-                </button>
-                <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </header>
-
       <main className="flex-grow">
         {/* Hero Section */}
         <div className="bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center py-16 md:py-20">
-              {/* <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="text-blue-600">Empowering</span> Stories,<br />
-                <span className="text-blue-900">Decentralized</span> Freedom.
-              </h1> */}
-
               <h1 className="text-3xl md:text-4xl font-bold text-[#0F265C]">
                 <span className="text-[#0061FF]">Empowering</span> Stories,
                 <br />
@@ -158,7 +27,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* People Banner */}
         <div className="bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="relative h-24 md:h-32">
@@ -179,7 +47,6 @@ export default function About() {
               <div>
                 <h2 className="text-lg font-semibold text-[#096CFF] mb-2">
                   <span className="bg-gray-100 px-2 py-1 rounded">
-                    {/* {" "} */}
                     What is Chainlib?
                   </span>
                 </h2>
@@ -195,7 +62,6 @@ export default function About() {
               <div>
                 <h2 className="text-lg font-semibold text-blue-600 mb-2">
                   <span className="bg-gray-100 px-2 py-1 rounded">
-                    {/* {" "} */}
                     Why Chainlib Exists?
                   </span>
                 </h2>
@@ -305,7 +171,6 @@ export default function About() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          {/* <g clip-path="url(#clip0_67_2264)"> */}
                           <g clipPath="url(#clip0_67_2264)">
                             <g opacity="0.7">
                               <path
@@ -519,21 +384,19 @@ export default function About() {
                 </h2>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-sm font-medium mb-4 flex items-center justify-center space-x-2">
                   <span>Become a Member</span>{" "}
-                  {/* Optional: wrap text in span for clarity */}
                   <span className="inline-flex items-center">
                     {" "}
-                    {/* Ensure span aligns well */}
                     <svg
-                      width="18" // Adjusted width slightly for better proportion with h-4
+                      width="18" 
                       height="16"
                       viewBox="0 0 27 16"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-auto" // Use Tailwind for size, aligns with text-sm
+                      className="h-4 w-auto"
                     >
                       <path
                         d="M17.6 1.4L23.2 7H0V9H23.2L17.6 14.6L19 16L27 8L19 0L17.6 1.4Z"
-                        fill="currentColor" // Inherit text color (white)
+                        fill="currentColor"
                       />
                     </svg>
                   </span>
@@ -628,7 +491,6 @@ export default function About() {
                     height={24}
                     className="h-6 w-6"
                   />
-                  {/* </div> */}
                 </div>
                 <span className="font-bold text-gray-900">ChainLib</span>
               </div>
@@ -674,7 +536,6 @@ export default function About() {
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                {/* Add more social icons as needed */}
                 <a
                   href="#"
                   aria-label="ChainLib on LinkedIn"
@@ -699,7 +560,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Navigation Links */}
             <div className="grid grid-cols-2 gap-8 md:gap-16">
               <div>
                 <h3 className="text-sm font-semibold text-gray-700 mb-3">
@@ -722,7 +582,6 @@ export default function About() {
                       Books
                     </Link>
                   </li>
-                  {/* Ensure these links point to the correct pages */}
                   <li>
                     <Link
                       href="/how-it-works"
@@ -767,7 +626,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Copyright */}
           <div className="mt-8 pt-6 border-t border-gray-200 text-center md:text-left">
             <p className="text-xs text-gray-500">
               © {new Date().getFullYear()} ChainLib. All rights reserved.
