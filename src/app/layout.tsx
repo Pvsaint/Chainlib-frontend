@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/landingpage/NavBar";
 import { Providers } from "@/components/blockchain/Providers";
+import Footer from "@/components/landingpage/Footer";
 
 export const metadata: Metadata = {
   title: "ChainLib",
@@ -15,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <NavBar />
         <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );
