@@ -160,7 +160,6 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Smart Contracts Feature */}
                   <div className="bg-gray-50 p-6 rounded-lg flex items-start">
                     <div className="flex-shrink-0 mr-4">
                       <div className="h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center">
